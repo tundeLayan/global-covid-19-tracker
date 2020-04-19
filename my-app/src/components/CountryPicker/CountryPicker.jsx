@@ -16,7 +16,6 @@ export default function CountryPicker({handleCountryChange}) {
     }, [setFetchedCountries]);
 
     
-    // console.log(fetchedCountries);
     return (
         <FormControl className={styles.formControl}>
             <NativeSelect 
