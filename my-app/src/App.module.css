@@ -1,7 +1,9 @@
 body{
     background-color: rgb(250,250,250);
     /* border: 3px solid black; */
+    margin: 0;
 }
+
 
 .container{
     display: flex;
@@ -9,17 +11,70 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.light{
+    color: #000;
+    background-color: #fff;
+}
+.dark{
+    color: #fff;
+    background-color: #121212;
+}
 
+.header{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 3em;
+    align-items: center;
+    margin-top: 40px;
+    padding-right: 10px;
+}
 .image{
+    flex: 80%;
     width: 370px;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 0, 0);
+    color: #FF7F7F;
     font-size: 30px;
 }
+.toggleIcon{
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .toggleIcon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 
 @media (max-width: 770px){
     .container{
