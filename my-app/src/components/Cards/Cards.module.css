@@ -28,6 +28,9 @@
 
 @media (max-width: 770px){
     .card{
-        margin: 4% 0 !important;
+        margin: 4% 6%!important;
+        width: 80% !important;
+        border: 1px solid black;
     }
+
 }
